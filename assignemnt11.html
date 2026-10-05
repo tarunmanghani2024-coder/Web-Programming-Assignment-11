@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
+        }
+        .Square-box{
+            height: 250px;
+            width: 80%;
+            margin-left: 150px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+        .square{
+            border-radius: 10px;
+            height: 100px;
+            width: 100px;
+            color: white;
+            text-align: center;
+            line-height: 90px;
+            margin: 25px;
+            border: 1px solid black;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+                 .s1{
+            background-color: yellowgreen;
+            animation-name: colour;
+         }
+         @keyframes colour{
+            from{
+                background-color: green
+            }
+            to{
+                background-color: yellow;
+            }
+         }
+         .s2{
+            background-color: blue;
+            animation-name: move;
+         }
+         @keyframes move{
+            0%{
+                transform: translate(0);
+            }
+            50%{
+                transform: translate(0,50px);
+            }
+            100%{
+                transform: translate(0);
+            }
+         }
+         .s3{
+            background-color: red;
+            animation-name: rotate;
+         }
+         @keyframes rotate{
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .s4{
+            background-color:aquamarine;
+            animation-name: pulse;
+         }
+         @keyframes pulse{
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1.5);
+            }
+        }
+        .s5{
+            background-color:green;
+            animation-name: fade;
+         }
+         @keyframes fade{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .s6{
+            border: 10px solid lightgrey;
+            border-top: 10px solid yellow;
+            border-radius: 50%;
+            animation-name: rotate;
+        }
+
+        .ball-box{
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ball{
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin: 15px;
+            animation-name: wave;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            
+        }
+        .b1{
+            background-color: red;
+            animation-delay: 0.1s;
+        }
+        .b2{
+            background-color: Orange;
+            animation-delay: 0.2s;
+        }
+        .b3{
+            background-color: yellow;
+            animation-delay: 0.3s;
+        }
+        .b4{
+            background-color: green;
+            animation-delay: 0.4s;
+        }
+        .b5{
+            background-color: blue;
+            animation-delay: 0.5s;
+        }
+        @keyframes wave{
+            0%{
+                transform: translateY(0px);
+            }
+            25%{
+                transform: translateY(-10px);
+            }
+            50%{
+                transform: translateY(0px);
+            }
+            75%{
+                transform: translateY(10px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        .move-box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin-left: 550px ;
+        }
+        .sq1{
+            height: 50px;
+            width: 50px;
+            background: linear-gradient(blue,skyblue);
+            animation-name: move-border;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move-border{
+            0%{
+                transform: translate(0px,0px);
+            }
+            25%{
+                transform: translate(150px,0px);
+            }
+            50%{
+                transform: translate(150px,150px);
+            }
+            75%{
+                transform: translate(0px,150px);
+            }
+            100%{
+                transform: translate(0px,0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h1>CSS Animation Example</h1>
+        <div class="Square-box">
+            <div class="square s1">Color</div>
+            <div class="square s2">Move</div>
+            <div class="square s3">Rotate</div>
+            <div class="square s4">Pulse</div>
+            <div class="square s5">Fade</div>
+            <div class="square s6"></div>
+        </div>
+        <div class="move-box">
+            <div class="sq1"></div>
+        </div>
+        <div class="ball-box">
+            <div class="ball b1"></div>
+            <div class="ball b2"></div>
+            <div class="ball b3"></div>
+            <div class="ball b4"></div>
+            <div class="ball b5"></div>
+        </div>
+        
+    </div>
+</body>
+</html>
